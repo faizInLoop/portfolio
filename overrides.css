@@ -1,0 +1,31 @@
+/* Compact document viewer refinements. */
+.resume-heading { margin-bottom: 34px; }
+.resume-actions { display: flex; gap: 10px; }
+.resume-frame { width: min(420px, calc(100% - 56px)); height: min(260px, 28vh); margin-inline: auto; overflow: auto; }
+.metrics strong { font-size: 22px; }
+.experience-section { display: grid; grid-template-columns: 220px 1fr; gap: 80px; padding-block: 120px; border-bottom: 1px solid var(--line); }
+.experience-section h2 { font-size: clamp(34px, 4vw, 56px); letter-spacing: -3px; line-height: 1.08; margin-bottom: 28px; }
+.experience-card { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; padding: 25px 0; border-top: 1px solid var(--line); }
+.experience-card span { font: 500 10px 'DM Mono', monospace; color: var(--emerald); }
+.experience-card p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+.experience-card strong { color: var(--ink); font-size: 17px; }
+.experience-card ul { display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 18px 0 0; gap: 8px; }
+.experience-card li { border: 1px solid var(--line); border-radius: 20px; padding: 5px 9px; font: 400 10px 'DM Mono', monospace; }
+.credentials-section { display: grid; grid-template-columns: 220px 1fr; gap: 80px; padding-block: 120px; border-bottom: 1px solid var(--line); }
+.credentials-section h2 { font-size: clamp(34px, 4vw, 56px); letter-spacing: -3px; line-height: 1.08; margin-bottom: 28px; }
+.credential-list { border-top: 1px solid var(--line); }
+.credential-list > a, .credential-list > div { color: inherit; display: grid; grid-template-columns: 90px 1fr auto; gap: 20px; padding: 19px 0; border-bottom: 1px solid var(--line); }
+.credential-list > a:hover strong { color: var(--emerald); }
+.credential-list span { font: 500 10px 'DM Mono', monospace; color: var(--emerald); }
+.credential-list p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.credential-list strong { color: var(--ink); }
+.credential-list b { color: var(--emerald); font-size: 18px; }
+
+@media (max-width: 760px) {
+  .resume-actions { flex-wrap: wrap; }
+  .resume-frame { width: calc(100% - 56px); height: 220px; }
+  .experience-section { grid-template-columns: 1fr; gap: 26px; padding-block: 85px; }
+  .experience-card { grid-template-columns: 1fr; gap: 6px; }
+  .credentials-section { grid-template-columns: 1fr; gap: 26px; padding-block: 85px; }
+  .credential-list > a, .credential-list > div { grid-template-columns: 58px 1fr auto; gap: 12px; }
+}
